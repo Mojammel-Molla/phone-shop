@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <header>
+    <h1 class="text-5xl text-center mb-8">welcome to shop MobileWala</h1>
+  </header>
+  <main>
+    <!-- Search input and button -->
+    <section class="my-20 ml-10">
+      <input id="input-field" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+      <button onclick="clickHandler()" class="btn btn-active btn-accent">Search</button>
+    </section>
+    <!-- Phones container -->
+    <section>
+      <div id="loading-spinner" class="text-center my-40  hidden">
+        <span class="loading loading-spinner loading-lg text-center width-full mx-auto"></span>
+      </div>
+      <div id="phone-container" class="grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+
+      </div>
+      <!-- Show modal items -->
+      <!-- Open the modal using ID.showModal() method -->
+
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <form method="dialog" class="modal-box">
+          <h3 id="show-detail-phone" class="font-bold text-lg">hello</h3>
+          <div id="show-modal-container" class="">
+
+          </div>
+          <div class="modal-action">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </div>
+        </form>
+      </dialog>
+      <!-- show all button -->
+      <div class="my-10 text-center">
+        <button onclick="showAllHandle()" id="show-all-items" class="btn btn-active btn-accent hidden">Show All</button>
+      </div>
+    </section>
+  </main>
+  <script src="./js/phone.js"></script>
+</body>
+
+</html>
